@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundsoccer"
+    android:orientation="vertical"
+    tools:context="com.example.android.soccerbetting.MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#0D000000"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:fontFamily="cursive"
+                android:lines="1"
+                android:text="Team A"
+                android:textColor="#FFFFFF"
+                android:textSize="33sp"/>
+
+            <TextView
+                android:id="@+id/team_a_score_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="cursive"
+                android:text="0"
+                android:textColor="#FFFFFF"
+                android:textSize="38sp"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/button_background"
+                android:minHeight="40dp"
+                android:minWidth="80dp"
+                android:onClick="setScoreTeamA"
+                android:text="Goal +"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:fontFamily="cursive"
+                android:lines="1"
+                android:text="Team B"
+                android:textColor="#FFFFFF"
+                android:textSize="33sp"/>
+
+            <TextView
+                android:id="@+id/team_b_score_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="cursive"
+                android:text="0"
+                android:textColor="#FFFFFF"
+                android:textSize="38sp"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/button_background"
+                android:minHeight="40dp"
+                android:minWidth="80dp"
+                android:onClick="setScoreTeamB"
+                android:text="Goal +"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:background="#26000000"
+        android:fontFamily="cursive"
+        android:gravity="center"
+        android:text="Betting Calculator"
+        android:textColor="#FFFFFF"
+        android:textSize="35sp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:background="#1A000000"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:text="Odd"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/team_a_odd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:text="1.48"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:text="Stake"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/team_a_stake"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0€"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/button_background"
+                android:minHeight="40dp"
+                android:minWidth="40dp"
+                android:onClick="setTeamAStakePLus"
+                android:text="€+"
+                android:textSize="18sp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_background"
+                android:minHeight="40dp"
+                android:minWidth="40dp"
+                android:onClick="setTeamAStakeMinus"
+                android:text="€-"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+            <TextView
+                android:id="@+id/team_a_profit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Profit: 0000€"
+                android:textColor="#FFFFFF"
+                android:textSize="23sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:text="Odd"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/team_b_odd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:text="1.48"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:text="Stake"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/team_b_stake"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0€"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/button_background"
+                android:minHeight="40dp"
+                android:minWidth="40dp"
+                android:onClick="setTeamBStakePLus"
+                android:text="€+"
+                android:textSize="20sp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_background"
+                android:minHeight="40dp"
+                android:minWidth="40dp"
+                android:onClick="setTeamBStakeMinus"
+                android:text="€-"
+                android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/team_b_profit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Profit: 0000€"
+                android:textColor="#FFFFFF"
+                android:textSize="23sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:onClick="reset"
+        android:text="Reset"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"/>
+</LinearLayout>
+
+
